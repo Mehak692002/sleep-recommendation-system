@@ -1,34 +1,29 @@
-# --- Core Backend ---
+# ── Core Backend ──────────────────────────────────────────
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
 pydantic[email]==2.7.1
 
-# --- Auth & Security ---
+# ── Database ───────────────────────────────────────────────
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+
+# ── Auth & Security ────────────────────────────────────────
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 bcrypt==4.0.1
 
-# --- Environment ---
+# ── Environment ────────────────────────────────────────────
 python-dotenv==1.0.1
 
-# --- Database ---
-sqlalchemy==2.0.30
-psycopg2-binary==2.9.9       # PostgreSQL driver
-alembic==1.13.1              # DB migrations
-
-# --- Rate Limiting ---
+# ── Rate Limiting ──────────────────────────────────────────
 slowapi==0.1.9
 
-# --- HTTP Clients ---
+# ── HTTP ───────────────────────────────────────────────────
 httpx==0.27.0
 requests==2.32.2
 
-# --- Data & ML ---
+# ── Data & ML (only if actually used in routes) ────────────
 numpy==1.26.4
 pandas==2.2.2
 scikit-learn==1.4.2
-scipy==1.13.1
 joblib==1.4.2
-
-# --- Deep Learning ---
-tensorflow-cpu==2.16.1
