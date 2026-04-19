@@ -2,7 +2,7 @@
  * api.js — Unified API client with JWT auth
  */
 
-export const API_BASE = "http://localhost:8000";
+export const API_BASE = "https://sleepsense-backend-z6gz.onrender.com";
 
 // ── Token helpers ──────────────────────────────────────────────────────────
 export const getToken   = ()  => localStorage.getItem("token");
