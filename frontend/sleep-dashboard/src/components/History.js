@@ -43,7 +43,6 @@ export default function History({ onLogMore }) {
     if (!user) return;
 
     // ✅ FIX: use user_id from auth context in the URL
-    const userId = user.user_id || user.id || "me";
 
     api.get("/sleep/history")
       .then((data) => {
