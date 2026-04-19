@@ -22,23 +22,24 @@ function AppInner() {
 
   // ── Set starting step based on user ──────────────────────────────────────
   useEffect(() => {
-    if (!user) {
-      setStep(null);
-      setProfile(null);
-      setLatestLog(null);
-      setRecommendations(null);
-      return;
-    }
-    setStep(user.profile_created ? "log" : "profile");
-  }, [user?.user_id]);
+  if (!user) {
+    setStep(null);
+    setProfile(null);
+    setLatestLog(null);
+    setRecommendations(null);
+    return;
+  }
+  setStep(user.profile_created ? "log" : "profile");
+}, [user]);                          // ← was [user?.user_id]
+
 
   // ── Fetch profile for returning users ────────────────────────────────────
   useEffect(() => {
-    if (!user?.profile_created) return;
-    api.get("/profile/")
-      .then((data) => setProfile(data))
-      .catch(() => {});
-  }, [user?.user_id]);
+  if (!user?.profile_created) return;
+  api.get("/profile/")
+    .then((data) => setProfile(data))
+    .catch(() => {});
+}, [user?.profile_created, user]);
 
   // ── Loading ───────────────────────────────────────────────────────────────
   if (loading || (user && step === null)) {
