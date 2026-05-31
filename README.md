@@ -469,33 +469,6 @@ created_at
 - SQL Injection Protection
 - Secure HTTP Headers
 
----
-
-## 📸 Screenshots
-
-### Dashboard
-
-Add dashboard screenshot here:
-
-```text
-docs/images/dashboard.png
-```
-
-### Analytics
-
-Add analytics screenshot here:
-
-```text
-docs/images/analytics.png
-```
-
-### Sleep Logger
-
-Add sleep logger screenshot here:
-
-```text
-docs/images/sleep-logger.png
-```
 
 ---
 
